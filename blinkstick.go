@@ -16,20 +16,20 @@ var (
 
 func main() {
 	flag.Usage = func() {
-		fmt.Printf("The tool 'blink' provides a simple functions to play with colors for the first found BlinkStick device\n")
+		fmt.Printf("The tool 'blinkstick' provides a simple functions to play with colors for the first found BlinkStick device\n")
 		fmt.Printf("Usage:\n")
-		fmt.Printf("blink -color <colorname>\n")
-		fmt.Printf("blink -color <colorname> -lighttype blink\n")
+		fmt.Printf("blinkstick -color <colorname>\n")
+		fmt.Printf("blinkstick -color <colorname> -lighttype blink\n")
 		fmt.Printf("Example:\n")
-		fmt.Printf("blink -color blue -lighttype blink -duration 100 -times 10\n\n")
+		fmt.Printf("blinkstick -color blue -lighttype blink -duration 100 -times 10\n\n")
 		flag.PrintDefaults()
 	}
 
 	flag.StringVar(&col, "color", "black", "color (for example, red, lime, white, etc. or off")
 	flag.StringVar(&lighttype, "lighttype", "static", "lighttype (static, blink or pulse)")
 	duration := flag.Int64("duration", 300, "time between blinks")
-	times := flag.Int("times", 5, "how many times it should blink")
-	steps := flag.Int("steps", 15, "steps between pulse states")
+	times := flag.Int("times", 5, "defines how many times it should blink")
+	steps := flag.Int("steps", 15, "steps between pulse color and black")
 	flag.Parse()
 
 	color, err := LookupColorName(col)
