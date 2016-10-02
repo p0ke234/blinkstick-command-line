@@ -27,5 +27,5 @@ lighttype (static, blink or pulse) (default "static")
 * steps int  
 steps between pulse colors (default 15)  
 * times int  
-how many times it should blink/pulse (default 5)
+defines how many times it should blink/pulse (default 5)
 
