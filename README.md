@@ -1,5 +1,5 @@
 # blinkstick-command-line
-a simple go command line tool for the blinkstick device
+a simple go command line tool for the [BlinkStick](https://www.blinkstick.com/) device
 
 ## Requirements and Installation
 Required the golang package led by boombuler
